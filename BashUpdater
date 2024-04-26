@@ -1,0 +1,35 @@
+<!-- #!/bin/bash
+clear;
+
+#While loop to make the script run until canceled
+while [ : ]
+	do
+#Clears after each run
+clear;
+#Variable to get current time (HH:MM:SS) 24 Hour Clock
+StartTime=$(date +"%T")
+	#Tells the time for when the script started
+	echo "Time at the start of the script is $StartTime."
+
+		#Updates Repositories, Programs and removes old and unwanted stuff
+			#'-qq' makes the script silent but still reports errors
+		echo "	I will now start updating Repositories." && 
+			sudo apt-get -qq update && echo "	I have finished updating the Repositories.";
+		echo "I will now upgrade programs" &&
+			sudo apt-get -qq upgrade -y && echo "I have finished upgrading the programs."
+		echo "	I will now remove the old and unwanted stuff for you." &&
+			sudo apt-get -qq autoremove -y && echo "	I have now removed the old, unwanted stuff."
+
+#Variable to get the time after the script has run
+StopTime=$(date +"%T")
+	#Tells the time for when the script is nearly done
+	echo "Time at the end of the script is $StopTime."
+	
+	#Jumps down 3 line to prepare for the next hours's reporting
+#	echo ""; echo ""; echo "";
+
+	#Makes the script sleep for 1 hour (3600 seconds)
+	sleep 3600
+
+done
+  -->
